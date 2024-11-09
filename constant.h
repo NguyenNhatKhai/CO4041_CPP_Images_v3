@@ -1,0 +1,24 @@
+//
+
+#ifndef _CONSTANT_H_
+#define _CONSTANT_H_
+
+constexpr int IMAGE_WIDTH = 1920;
+constexpr int IMAGE_HEIGHT = 1080;
+constexpr int IMAGE_PIXELS = IMAGE_WIDTH * IMAGE_HEIGHT;
+constexpr int IMAGE_BITS = IMAGE_PIXELS * 24;
+
+constexpr int RS_SYMBOL = 8;
+constexpr int RS_CODEWORD = 255 * RS_SYMBOL;
+constexpr int RS_MESSAGE = 239 * RS_SYMBOL;
+constexpr int RS_PARITY = RS_CODEWORD - RS_MESSAGE;
+constexpr int RS_DETECTION_CAPABILITY = RS_PARITY / RS_SYMBOL;
+constexpr int RS_CORRECTION_CAPABILITY = RS_DETECTION_CAPABILITY / 2;
+
+constexpr int HAMMING_CODEWORD = 128;
+constexpr int HAMMING_MESSAGE = 120;
+constexpr int HAMMING_PARITY = HAMMING_CODEWORD - HAMMING_MESSAGE;
+constexpr int HAMMING_DETECTION_CAPABILITY = 2;
+constexpr int HAMMING_CORRECTION_CAPABILITY = 1;
+
+#endif
